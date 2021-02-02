@@ -1,2 +1,2 @@
 # Camera Auto Adjust
- A adaptative script that auto adjust the camera position if a collider is hitted
+An adaptive script that auto adjust the camera position if a collider is hit.
