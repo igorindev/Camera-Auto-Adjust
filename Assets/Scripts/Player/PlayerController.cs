@@ -13,7 +13,7 @@ namespace Player.Movement
         [Header("Configurations")]
         [SerializeField] float rotationSpeed = 7f;
         [SerializeField] float speed = 7.5f;
-        [SerializeField] float jumpSpeed = 8.0f;
+        [SerializeField] float jumpHight = 8.0f;
         [SerializeField] float gravity = 20.0f;
 
         [Header("Dodge")]
@@ -24,16 +24,17 @@ namespace Player.Movement
         Vector2 rotation;
         Vector2 movement;
         Vector3 lastMoveDir;
+        Vector3 moveDirection;
+        Vector3 velocity;
         bool jump;
-
         bool isLocked = false;
         bool isDodging = false;
         bool canMove = true;
-        Vector3 moveDirection;
+        bool isGrounded;
 
-        public bool IsLocked{ get => isLocked; }
+        public bool IsLocked { get => isLocked; }
         public bool IsDodging { get => isDodging; }
-        public bool CanMove { get => canMove; set => canMove = value; } 
+        public bool CanMove { get => canMove; set => canMove = value; }
         public Vector3 MoveDirection { get => moveDirection; set => moveDirection = value; }
 
         void Start()
@@ -64,29 +65,32 @@ namespace Player.Movement
         {
             if (CanMove)
             {
-                if (controller.isGrounded)
+                isGrounded = controller.isGrounded;
+
+                Vector3 direction = (new Vector3(connectionPoint.position.x, cameraController.position.y, connectionPoint.position.z) - cameraController.position).normalized;
+
+                Vector3 forward = direction;
+                Debug.DrawRay(transform.position, forward * 2, Color.blue, 0.02f);
+                Vector3 right = cameraController.TransformDirection(Vector3.right);
+                Debug.DrawRay(transform.position, right * 2, Color.red, 0.02f);
+
+                float curSpeedX = CanMove ? speed * movement.y : 0;
+                float curSpeedY = CanMove ? speed * movement.x : 0;
+                lastMoveDir = moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+                if (jump && isGrounded)
                 {
-                    Vector3 direction = (new Vector3(connectionPoint.position.x, cameraController.position.y, connectionPoint.position.z) - cameraController.position).normalized;
-
-                    Vector3 forward = direction;
-                    Debug.DrawRay(transform.position, forward * 2, Color.blue, 0.02f);
-                    Vector3 right = cameraController.TransformDirection(Vector3.right);
-                    Debug.DrawRay(transform.position, right * 2, Color.red, 0.02f);
-
-                    float curSpeedX = CanMove ? speed * movement.y : 0;
-                    float curSpeedY = CanMove ? speed * movement.x : 0;
-                    lastMoveDir = moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-
-                    if (jump)
-                    {
-                        moveDirection.y = jumpSpeed;
-                    }
+                    velocity.y = Mathf.Sqrt(jumpHight * -2 * gravity);
                 }
 
-                // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
-                // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
-                // as an acceleration (ms^-2)
-                moveDirection.y -= gravity * Time.deltaTime;
+                if (isGrounded && velocity.y < 0)
+                {
+                    velocity.y = -2f;
+                }
+
+                velocity.y += gravity * Time.deltaTime;
+
+                moveDirection += velocity;
 
                 // Move the controller
                 controller.Move(moveDirection * Time.deltaTime);

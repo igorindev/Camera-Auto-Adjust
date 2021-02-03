@@ -4,6 +4,7 @@ namespace TPSCameraController
 {
     public class CameraController : MonoBehaviour
     {
+        [Header("Configurations")]
         [SerializeField] Vector2 xAxisLimits;
         [SerializeField] float radiusOffset = 0;
 
@@ -45,9 +46,9 @@ namespace TPSCameraController
 
             if (AllowCameraMovement)
             {
-                rotation.x += cameraMove.x * horizontalMouseSensibility;
-                rotation.y -= cameraMove.y * verticalMouseSensibility;
-            
+                rotation.x += cameraMove.x * horizontalMouseSensibility * 100 * Time.deltaTime;
+                rotation.y -= cameraMove.y * verticalMouseSensibility * 100 * Time.deltaTime;
+
                 rotation.y = Mathf.Clamp(rotation.y, -xAxisLimits.x, xAxisLimits.y);
             
                 transform.localRotation = Quaternion.Euler(rotation.y, rotation.x, 0);

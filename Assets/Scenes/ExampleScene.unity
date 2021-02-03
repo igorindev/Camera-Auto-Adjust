@@ -166,7 +166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11790424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.345, y: 0.98, z: 7.66}
+  m_LocalPosition: {x: 0.345, y: 0, z: 7.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1938494672}
@@ -191,10 +191,14 @@ MonoBehaviour:
   playerMesh: {fileID: 1938494672}
   rotationSpeed: 7
   speed: 7.5
-  jumpSpeed: 8
-  gravity: 20
+  jumpHight: 1
+  gravity: -15
   dodgeDistance: 7
   dodgeDuration: 0.2
+  radius: 0.5
+  layers:
+    serializedVersion: 2
+    m_Bits: 119
 --- !u!143 &11790429
 CharacterController:
   m_ObjectHideFlags: 0
@@ -212,7 +216,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Center: {x: 0, y: 1.25, z: 0}
 --- !u!1 &281872940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,7 +1645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402254394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1465471415}
@@ -2281,7 +2285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938494671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 470411355}
