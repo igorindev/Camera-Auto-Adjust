@@ -39,11 +39,6 @@ namespace TPSCameraController
 
         private void Update()
         {
-           //rotation.y += Input.GetAxis("Mouse X") * horizontalMouseSensibility;
-           //rotation.x += -Input.GetAxis("Mouse Y") * verticalMouseSensibility;
-           //rotation.x = Mathf.Clamp(rotation.x, -xAxisLimits.x, xAxisLimits.y);
-           //transform.localRotation = Quaternion.Euler(rotation.x, rotation.y, 0);
-
             if (AllowCameraMovement)
             {
                 rotation.x += cameraMove.x * horizontalMouseSensibility * 100 * Time.deltaTime;
