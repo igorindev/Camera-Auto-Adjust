@@ -195,10 +195,6 @@ MonoBehaviour:
   gravity: -15
   dodgeDistance: 7
   dodgeDuration: 0.2
-  radius: 0.5
-  layers:
-    serializedVersion: 2
-    m_Bits: 119
 --- !u!143 &11790429
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1628,7 +1624,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1402254395}
-  - component: {fileID: 1402254397}
   - component: {fileID: 1402254396}
   m_Layer: 6
   m_Name: CameraTarget
@@ -1668,19 +1663,6 @@ MonoBehaviour:
   radiusOffset: 0.98
   horizontalMouseSensibility: 1
   verticalMouseSensibility: 2
---- !u!114 &1402254397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402254394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97939637cf6038c4e8b25d33a8594216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetToLock: {fileID: 0}
 --- !u!1 &1441888515
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,10 +2157,8 @@ MonoBehaviour:
   duration: 0.5
   speed: 10
   curve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 1
       inSlope: 0
       outSlope: 0
@@ -2186,8 +2166,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -2199,6 +2178,12 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   deltaMovement: 1
+  playerCamera: {fileID: 0}
+  time: 0
+  lastPos: {x: 0, y: 0, z: 0}
+  nextPos: {x: 0, y: 0, z: 0}
+  lastFOV: 0
+  nextFOV: 0
 --- !u!1 &1756077578
 GameObject:
   m_ObjectHideFlags: 0
