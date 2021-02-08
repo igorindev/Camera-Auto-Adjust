@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Input/PlayerInput.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Input/PlayerInput.inputactions'
 
 using System;
 using System.Collections;
@@ -64,7 +64,18 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""2D Vector"",
+                    ""name"": """",
+                    ""id"": ""101cc2d7-f7a5-469b-8099-79c42af9082f"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Camera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
                     ""id"": ""49977824-97b1-4f68-939b-79d23cc105c4"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
@@ -120,11 +131,33 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""ec233d7d-922f-4070-abf3-9604c1149136"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""a67585bd-cfbd-4449-8c45-cfd2e3bf9231"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eeb3bc94-11cf-4061-a3f1-a5379eae52e7"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -139,113 +172,15 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Boat"",
-            ""id"": ""a12d9d24-8eda-4c21-b8a3-6dcaae122419"",
-            ""actions"": [
-                {
-                    ""name"": ""Movement"",
-                    ""type"": ""Value"",
-                    ""id"": ""d8aab450-1079-4c62-8141-34242716362c"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Attack"",
-                    ""type"": ""Button"",
-                    ""id"": ""d01a1529-77d7-4601-98c0-28f8bf7fcb00"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Parry"",
-                    ""type"": ""Button"",
-                    ""id"": ""9cb87e20-fc8f-4295-a938-ab7448cf5f53"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": ""WASD"",
-                    ""id"": ""37b40388-7cce-47f9-bfa8-7cd58325c703"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""61d0c721-68ea-4821-8649-cb0f25bb49b4"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""5186d1b4-2a16-4992-a9d1-0b68ccb09dfb"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""3a878599-ad46-4db4-8b56-dfdf413d352c"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""93a1c787-6ef3-4186-a95f-c0a880860446"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
-                    ""id"": ""7bcc8c3e-fab9-47f9-9ab1-62e43b6b37bc"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""id"": ""b6aef51e-2d33-426c-8eb8-af8644d6b94a"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c08e9c26-3ff6-465d-b7cd-7a7f100e5ec5"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Parry"",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -268,6 +203,17 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""isOR"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Gamepad"",
+            ""bindingGroup"": ""Gamepad"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
@@ -277,11 +223,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
-        // Boat
-        m_Boat = asset.FindActionMap("Boat", throwIfNotFound: true);
-        m_Boat_Movement = m_Boat.FindAction("Movement", throwIfNotFound: true);
-        m_Boat_Attack = m_Boat.FindAction("Attack", throwIfNotFound: true);
-        m_Boat_Parry = m_Boat.FindAction("Parry", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -384,55 +325,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
-
-    // Boat
-    private readonly InputActionMap m_Boat;
-    private IBoatActions m_BoatActionsCallbackInterface;
-    private readonly InputAction m_Boat_Movement;
-    private readonly InputAction m_Boat_Attack;
-    private readonly InputAction m_Boat_Parry;
-    public struct BoatActions
-    {
-        private @PlayerInput m_Wrapper;
-        public BoatActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Boat_Movement;
-        public InputAction @Attack => m_Wrapper.m_Boat_Attack;
-        public InputAction @Parry => m_Wrapper.m_Boat_Parry;
-        public InputActionMap Get() { return m_Wrapper.m_Boat; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(BoatActions set) { return set.Get(); }
-        public void SetCallbacks(IBoatActions instance)
-        {
-            if (m_Wrapper.m_BoatActionsCallbackInterface != null)
-            {
-                @Movement.started -= m_Wrapper.m_BoatActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_BoatActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_BoatActionsCallbackInterface.OnMovement;
-                @Attack.started -= m_Wrapper.m_BoatActionsCallbackInterface.OnAttack;
-                @Attack.performed -= m_Wrapper.m_BoatActionsCallbackInterface.OnAttack;
-                @Attack.canceled -= m_Wrapper.m_BoatActionsCallbackInterface.OnAttack;
-                @Parry.started -= m_Wrapper.m_BoatActionsCallbackInterface.OnParry;
-                @Parry.performed -= m_Wrapper.m_BoatActionsCallbackInterface.OnParry;
-                @Parry.canceled -= m_Wrapper.m_BoatActionsCallbackInterface.OnParry;
-            }
-            m_Wrapper.m_BoatActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
-                @Attack.started += instance.OnAttack;
-                @Attack.performed += instance.OnAttack;
-                @Attack.canceled += instance.OnAttack;
-                @Parry.started += instance.OnParry;
-                @Parry.performed += instance.OnParry;
-                @Parry.canceled += instance.OnParry;
-            }
-        }
-    }
-    public BoatActions @Boat => new BoatActions(this);
     private int m_KeyboardandMouseSchemeIndex = -1;
     public InputControlScheme KeyboardandMouseScheme
     {
@@ -442,17 +334,20 @@ public class @PlayerInput : IInputActionCollection, IDisposable
             return asset.controlSchemes[m_KeyboardandMouseSchemeIndex];
         }
     }
+    private int m_GamepadSchemeIndex = -1;
+    public InputControlScheme GamepadScheme
+    {
+        get
+        {
+            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
+            return asset.controlSchemes[m_GamepadSchemeIndex];
+        }
+    }
     public interface IPlayerActions
     {
         void OnCamera(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
-    }
-    public interface IBoatActions
-    {
-        void OnMovement(InputAction.CallbackContext context);
-        void OnAttack(InputAction.CallbackContext context);
-        void OnParry(InputAction.CallbackContext context);
     }
 }
